@@ -2,12 +2,29 @@
 
 /*
 Plugin Name: PhotoPress - Sideways Gallery
-Plugin URI: Permalink: http://www.peteradamsphoto.com/?page_id=3148
+Plugin URI: http://www.photopresdev.com
 Description: Adds a sideways scrolling gallery presentation to the core gallery shortcode.
 Author: Peter Adams
+Author URI: http://www.photopressdev.com
+License: GPL v3
 Version: 1.0
-Author URI: http://www.peteradamsphoto.com 
 */
+
+/**
+ * PhotoPress Image Taxonomies
+ *
+ * Copyright Peter Adams - peter@photopressdev.com
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
 
 class photopress_gallery_sideways {
 	
