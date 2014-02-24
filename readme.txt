@@ -1,6 +1,6 @@
 === PhotoPress - Sideways Gallery ===
 Contributors: padams
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=F83AGPR2W5AXS
+Donate link: http://www.photopressdev.com
 Tags: photos, images, gallery, photopress, sideways, slider
 Requires at least: 3.7
 Tested up to: 3.7.1
@@ -10,11 +10,24 @@ Extends the [gallery] shortcode to add a "sideways" slider display option.
 
 == Description ==
 
-This plugin allows you to display a regular gallery using a sideways scrolling slider style. The plugin extends the core [gallery] shortcode by adding a "type" attribute so that you can choose this sideways presentation on a gallery by gallery basis.
+This plugin allows you to display a theme independant gallery of images using a sideways scrolling slider style. The plugin extends the core [gallery] shortcode by adding a "type" attribute so that you can choose this sideways presentation on a gallery by gallery basis.
 
-**Feature List**
+= Features Include: =
+* Adds *"type"* gallery attribute and "sideways" value to the core gallery shortcode.
 
-* Adds *"type"* shortcode parameter and "sideways" value
+= Premium Support =
+The PhotoPress team does not provide support for this plugin on the WordPress.org forums. One on one email support is available to users that purchase one of our [Premium Support Plans](http://www.photopressdev.com).
+
+= Other PhotoPress Plugins =
+* [PhotoPress Image Taxonomies](http://wordpress.org/plugins/photo-tools-image-taxonomies/)
+* [PhotoPress Gallery](http://wordpress.org/plugins/photopress-gallery/)
+* [PhotoPress Paypal Shopping Cart](http://wordpress.org/plugins/photopress-paypal-shopping-cart/)
+* [PhotoPress Masonry Gallery](http://wordpress.org/plugins/photopress-masonry-gallery/)
+* [PhotoPress Sideways Gallery](http://wordpress.org/plugins/photopress-sideways-gallery/)
+* [PhotoPress Latest Images](http://wordpress.org/plugins/photopress-latest-images/)
+
+= The Guide To WordPress For Photographers =
+For more information on ways to use PhotoPress and other plugins to build a photpgraphy website check out the [WordPress For Photographers e-Book](http://wpphotog.com/product/the-guide-to-wordpress-for-photographers/ "WordPress For Photographers").
 
 == Example Usage ==
 
