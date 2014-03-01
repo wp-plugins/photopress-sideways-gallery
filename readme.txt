@@ -3,8 +3,8 @@ Contributors: padams
 Donate link: http://www.photopressdev.com
 Tags: photos, images, gallery, photopress, sideways, slider
 Requires at least: 3.7
-Tested up to: 3.7.1
-Stable tag: 1.0
+Tested up to: 3.8.1
+Stable tag: 1.1
 
 Extends the [gallery] shortcode to add a "sideways" slider display option.
 
@@ -49,6 +49,11 @@ You need this plugin if you want to turn an image gallery into a sideways slider
 
 == Changelog ==
 
+= 1.1 =
+
+- Fixes issue in some browsers where the height of the gallery was not properly set.
+
 = 1.0 =
 
 Initial version of plugin.
+

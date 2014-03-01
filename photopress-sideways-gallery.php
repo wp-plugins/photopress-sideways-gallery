@@ -7,7 +7,7 @@ Description: Adds a sideways scrolling gallery presentation to the core gallery 
 Author: Peter Adams
 Author URI: http://www.photopressdev.com
 License: GPL v3
-Version: 1.0
+Version: 1.1
 */
 
 /**
@@ -110,10 +110,29 @@ function photopress_gallery_sideways_pre_output( $output, $selector, $attr ) {
 	// Attributes needed for sideways gallery markup
 	// needed in case there is more than 1 gallery per page
 	if ( isset( $attr['type'] ) && $attr['type'] === 'sideways' ) {
-	
+			
+		// get the height of the image size being used by the gallery
+		if ( isset ( $attr['size'] ) ) {
+			
+			$size = $attr['size'];
+			
+			// this is a bit fragile  but there is no API for retrieving image size dimensions.	
+			global $_wp_additional_image_sizes;
+				
+			if ( isset ( $_wp_additional_image_sizes[ $size ] ) ) {
+				
+				$height = $_wp_additional_image_sizes[ $size ]['height'];
+			} else {
+				
+				$height = 400;
+			}	
+		}		
+		
+		$height .= 'px';
+		
 		$output = "
 		<div id='photopress-gallery-sideways-$selector' class='photopress-gallery-container'>
-		<div id='' class='photopress-gallery-sideways-frame'>";
+		<div id='' class='photopress-gallery-sideways-frame' style='height:$height'>";
 	}
 	
 	return $output;
@@ -164,37 +183,6 @@ function photopress_gallery_sideways_post_output( $output, $selector, $attr ) {
 	
 	return $output;
 }
-
-
-/*
-function photopress_gallery_masonry_post_output( $output, $selector, $attr ) {
-	
-	if ( isset( $attr['type'] ) && $attr['type'] === 'masonry' ) {
-	
-		$output .= "
-		
-		<script>
-		
-		// make sure the dom is ready.
-		jQuery( function( $ ){
-	
-			( function () {
-				// create new masonry gallery
-				photopress.galleries['$selector'] = new photopress.gallery.masonry('#$selector');
-				// render gallery
-				photopress.galleries['$selector'].render();	
-		
-			}()); 
-		});
-		
-		</script>
-		<!-- End PhotoPress Masonry Gallery -->
-		";
-	}
-	
-	return $output;
-}
-*/
 
 /**
  * Changes the gallery shortcode attrs to support various gallery types
