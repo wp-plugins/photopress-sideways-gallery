@@ -7,7 +7,7 @@ Description: Adds a sideways scrolling gallery presentation to the core gallery 
 Author: Peter Adams
 Author URI: http://www.photopressdev.com
 License: GPL v3
-Version: 1.1
+Version: 1.2
 */
 
 /**
@@ -110,6 +110,8 @@ function photopress_gallery_sideways_pre_output( $output, $selector, $attr ) {
 	// Attributes needed for sideways gallery markup
 	// needed in case there is more than 1 gallery per page
 	if ( isset( $attr['type'] ) && $attr['type'] === 'sideways' ) {
+	
+		$height = false;
 			
 		// get the height of the image size being used by the gallery
 		if ( isset ( $attr['size'] ) ) {
@@ -118,11 +120,22 @@ function photopress_gallery_sideways_pre_output( $output, $selector, $attr ) {
 			
 			// this is a bit fragile  but there is no API for retrieving image size dimensions.	
 			global $_wp_additional_image_sizes;
-				
+		
 			if ( isset ( $_wp_additional_image_sizes[ $size ] ) ) {
 				
 				$height = $_wp_additional_image_sizes[ $size ]['height'];
-			} else {
+			
+			}
+			
+			// Could be a standard image size, if so get the height from options.
+			if ( ! $height ) {
+			
+				$height = get_option( $size . '_size_h' );
+				
+			}
+			
+			// final fallback
+			if ( ! $height ) { 
 				
 				$height = 400;
 			}	
