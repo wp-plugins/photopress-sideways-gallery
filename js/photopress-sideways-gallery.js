@@ -168,7 +168,7 @@ photopress.gallery.sideways.prototype = {
 			// mixed options
 			moveBy			: 300,
 			speed			: that.options.sly_options.speed || 4000,
-			easing			: that.options.sly_options.easing || 'easeOutExpo',
+			easing			: that.options.sly_options.easing || 'swing',
 			startAt			: that.options.sly_options.startAt || 0,
 			keyboardNavBy	: that.options.sly_options.keyboardNavBy || 1,
 			// Navigation Buttons
