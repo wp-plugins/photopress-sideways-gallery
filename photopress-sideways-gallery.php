@@ -7,7 +7,7 @@ Description: Adds a sideways scrolling gallery presentation to the core gallery 
 Author: Peter Adams
 Author URI: http://www.photopressdev.com
 License: GPL v3
-Version: 1.2
+Version: 1.3
 */
 
 /**
